@@ -1,9 +1,14 @@
 package api;
 
+import io.cucumber.datatable.DataTable;
+import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.http.HttpStatus;
+
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -14,6 +19,7 @@ public class ReqresApi {
     private final String GET_SINGLE_USER = "api/users/{n}";
     private final String GET_USER_LIST = "api/users?page={n}";
     private final String REGISTER_SUCESSFUL = "api/register";
+    private final String REGISTER_NEW_USER = "api/users";
 
     public Response updateUser(int n) {
         RequestSpecification request = given()
@@ -40,7 +46,7 @@ public class ReqresApi {
 
     }
 
-    public Response getUserList(String n) {
+    public Response getUserList(int n) {
         RequestSpecification request = given().log().all()
                 .pathParam("n", n);
 
@@ -62,5 +68,16 @@ public class ReqresApi {
         response.then().statusCode(HttpStatus.SC_OK);
 
         return response;
+    }
+
+    public Response addNewUser(DataTable usersTest){
+        RequestSpecification request = given()
+                .contentType("application/json; charset=utf-8");
+
+        Response response = request.post(BASE_URL + REGISTER_NEW_USER);
+        request.then().statusCode(HttpStatus.SC_CREATED);
+
+        return response;
+
     }
 }

@@ -14,8 +14,8 @@ public class GetUserListStep {
         reqresApi = new ReqresApi();
     }
 
-    @Dado("que passei o id {word} da pagina de usuarios")
-    public void quePasseiOIdIdDaPaginaDeUsuarios(String n) {
+    @Dado("que passei o id {int} da pagina de usuarios")
+    public void quePasseiOIdIdDaPaginaDeUsuarios(int n) {
         response = reqresApi.getUserList(n);
     }
 

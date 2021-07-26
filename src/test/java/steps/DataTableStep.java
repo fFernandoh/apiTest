@@ -24,5 +24,6 @@ public class DataTableStep {
         for (int x = 0; x < linhas.size(); x++) {
             response.then().body("data["+x+"].first_name" , Matchers.is(linhas.get(x)));
         }
+        response.then().log().all();
     }
 }

@@ -22,10 +22,10 @@ public class AddNewUsersStep {
     public void addNewUsersInTable(DataTable newUsers){
         List<Map<String , String>> users = newUsers.asMaps(String.class , String.class);
 
-        for(int x = 0 ; x < users.size(); x++){
-            response = reqresApi.addNewUser(newUsers);
-            response.getBody().prettyPrint();
-            response.then().statusCode(HttpStatus.SC_CREATED);
+        for(int x = 1 ; x <= users.size(); x++){
+                response = reqresApi.addNewUser(newUsers.cell(x,0), newUsers.cell(x,1));
+                response.getBody().prettyPrint();
+                response.then().statusCode(HttpStatus.SC_CREATED);
         }
     }
 }

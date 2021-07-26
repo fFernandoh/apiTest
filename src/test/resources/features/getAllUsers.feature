@@ -1,4 +1,6 @@
 #language: pt
+
+@all
 Funcionalidade: testar tabela
 
   Cenario: retornar todos os usuários da tabela

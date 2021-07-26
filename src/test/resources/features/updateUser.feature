@@ -1,6 +1,6 @@
 #language: pt
 
-@api
+@all
 Funcionalidade: devo atualizar os dados do usuario
 
   Esquema do Cenario: devo atualizar os dados do usuario

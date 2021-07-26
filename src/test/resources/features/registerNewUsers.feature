@@ -1,5 +1,6 @@
 #language: pt
 
+@all
 Funcionalidade: Adicionar usuários na lista
 
   Cenario: Adicionar usuários na lista com nome e a função
@@ -11,3 +12,4 @@ Funcionalidade: Adicionar usuários na lista
       | Byron     | UX design  |
       | George    | QA         |
       | Rachel    | PO         |
+      | Fernando  | cotoquinho |

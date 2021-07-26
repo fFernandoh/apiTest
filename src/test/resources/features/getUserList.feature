@@ -1,6 +1,6 @@
 #language: pt
 
-@api
+@all
 Funcionalidade: deve retornar o usuário
 
   Esquema do Cenario: deve retornar a lista de usuarios

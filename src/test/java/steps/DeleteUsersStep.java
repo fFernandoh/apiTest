@@ -2,7 +2,7 @@ package steps;
 
 import api.ReqresApi;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Entao;
 import io.restassured.response.Response;
 
 public class DeleteUsersStep {
@@ -19,7 +19,7 @@ public class DeleteUsersStep {
         response = reqresApi.deleteUsers(id);
     }
 
-    @Então("deve me retornar um status code ok")
+    @Entao("deve me retornar um status code ok")
     public void deveMeRetornarUmStatusCode() {
         response.then().log().all();
     }

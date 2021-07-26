@@ -3,7 +3,7 @@
 @all
 Funcionalidade: Adicionar usuários na lista
 
-  Cenario: Adicionar usuários na lista com nome e a função
+  Cenario: Adicionar usuários na lista com nome e a funcao
     Dado que eu passe alguns usuarios com nome e a funcao
       | firstName | job        |
       | Michael   | leader     |

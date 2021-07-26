@@ -3,7 +3,7 @@
 @all
 Funcionalidade: não consegui efetuar o login por falta da senha
 
-  Cenario: não conseguir efetuar o login devido a falta da senha
+  Cenario: nao conseguir efetuar o login devido a falta da senha
     Dado que informei o email
       | email       |
       | sydney@fife |

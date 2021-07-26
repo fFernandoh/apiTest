@@ -3,7 +3,7 @@ package steps;
 import api.ReqresApi;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Entao;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.apache.http.protocol.HTTP;
@@ -30,7 +30,7 @@ public class LoginUnsucessfulStep {
         }
     }
 
-    @Então("deve me retornar uma mensagem de erro informando que falta a senha")
+    @Entao("deve me retornar uma mensagem de erro informando que falta a senha")
     public void deveMeRetornarUmaMensagemDeErroInformandoQueFaltaASenha() {
         response.then().log().all();
     }

@@ -3,7 +3,7 @@ package steps;
 import api.ReqresApi;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Entao;
 import io.restassured.response.Response;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class LoginSucessfulStep {
         reqresApi = new ReqresApi();
     }
 
-    @Dado("que passei o usuário e senha")
+    @Dado("que passei o usuario e senha")
     public void fillUsernamePasswordField(DataTable dataTable) {
         List<Map<String , String>> users = dataTable.asMaps(String.class , String.class);
 
@@ -27,7 +27,7 @@ public class LoginSucessfulStep {
         }
     }
 
-    @Então("devo logar no sistema e retornar um token")
+    @Entao("devo logar no sistema e retornar um token")
     public void loginSucessful() {
         response.then().log().all();
     }
